@@ -3,11 +3,21 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
+import { bankAccounts } from "../data/data";
+
 export function getClientWithLeastBalance(array) {
   // Your code goes here...
-
+    var lowestValue = Infinity;
+  
+    for (const item of array) {
+      if (item['balance'] < lowestValue || item['balance'] > 0) {
+        var lowestValue = item['balance'];
+        var cheapestClient = [item];
+      }
+    }
+  
+    return cheapestClient;
 }
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"
 // If the test has all tests passed, switch to the next exercise file

@@ -5,9 +5,22 @@
 // flatArrays([['d', 'r', 'a'], ['f', 'y']]) => ['d', 'r', 'a', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
+import { flatArraysData } from "../data/data";
+
 export function flatArrays(array) {
   // Your code goes here...
-
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (Array.isArray(array[i])) {
+        let flattened = flatArrays(array[i]);
+        for (let j = 0; j < flattened.length; j++) {
+            result.push(flattened[j]);
+        }
+        } else {
+            result.push(array[i]);
+            }
+    }
+    return result;
 }
 
 

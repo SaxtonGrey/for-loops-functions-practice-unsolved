@@ -3,9 +3,22 @@
 // Array example: bankAccounts in /data/data.js
 // getAllWithdrawals(bankAccounts) => [3432, 43242.34, 23432]
 
+import { bankAccounts } from "../data/data";
+
 export function getAllWithdrawals(array) {
   // Your code goes here...
+    var sums = [];
 
+    for (var obj of array) {
+        if (obj['withdrawals']) {
+            var sum = 0;
+            for (var num of obj['withdrawals']) {
+                sum += Number(num);
+            } 
+            sums.push(sum);
+        } else { sums.push(0); }
+    } 
+    return sums;
 }
 
 // === TEST YOURSELF ===

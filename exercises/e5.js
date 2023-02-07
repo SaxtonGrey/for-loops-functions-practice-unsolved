@@ -6,7 +6,12 @@
 
 export function getAllClientNames(array) {
   // Your code goes here...
-
+    var clientNames = []
+    for (var account of array) {
+            var value = account['name'];
+            clientNames.push(value);
+        }
+    return clientNames;
 }
 
 

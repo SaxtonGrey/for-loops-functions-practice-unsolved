@@ -6,7 +6,12 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
-
+    var overHundred = [];
+    for (const obj of array) {
+        if (obj['balance'] > 100) {
+            overHundred.push(obj);
+        }
+    } return overHundred;
 }
 
 

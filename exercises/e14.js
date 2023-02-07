@@ -7,7 +7,24 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
+    var wrongBalance = [];
 
+    for (var obj of array) {
+        var depo = 0;
+        var withDraw = 0;
+
+        if (obj['deposits'] && obj['withdrawals']) {
+            for (var num of obj['deposits']) {
+            depo += Number(num);
+            }
+            for (var trans of obj['withdrawals']) {
+            withDraw += Number(trans);
+            } 
+            if (depo - withDraw != obj['balance']) {
+            wrongBalance.push(obj);
+            } 
+        }
+    } return wrongBalance;
 }
 
 
