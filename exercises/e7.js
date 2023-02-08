@@ -7,16 +7,15 @@ import { bankAccounts } from "../data/data";
 
 export function getClientWithLeastBalance(array) {
   // Your code goes here...
-    var lowestValue = Infinity;
-  
-    for (const item of array) {
-      if (item['balance'] < lowestValue || item['balance'] > 0) {
-        var lowestValue = item['balance'];
-        var cheapestClient = [item];
-      }
+    let lowestBalance = Infinity;
+    let lowestClient;
+    for (const client of array) {
+        if (client.balance > 0 && client.balance < lowestBalance) {
+        lowestBalance = client.balance;
+        lowestClient = [client];
+        }
     }
-  
-    return cheapestClient;
+    return lowestClient;
 }
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"

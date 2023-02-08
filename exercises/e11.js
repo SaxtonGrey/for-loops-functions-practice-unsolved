@@ -7,12 +7,12 @@ import { bankAccounts } from "../data/data";
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-    var sums = [];
+    let sums = [];
 
-    for (var obj of array) {
-        if (obj['withdrawals']) {
-            var sum = 0;
-            for (var num of obj['withdrawals']) {
+    for (const obj of array) {
+        if (obj.withdrawals) {
+            let sum = 0;
+            for (const num of obj.withdrawals) {
                 sum += Number(num);
             } 
             sums.push(sum);

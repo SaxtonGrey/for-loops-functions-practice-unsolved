@@ -6,13 +6,12 @@
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   // Your code goes here...
-    var lessThanTwo = [];
+    let lessThanTwo = [];
 
-    for (var obj of array) {
-        var sum = 0;
-
-        if (obj['deposits']) {
-            for (var num of obj['deposits']) {
+    for (const obj of array) {
+        if (obj.deposits) {
+            let sum = 0;
+            for (const num of obj.deposits) {
                 sum += Number(num);
             } 
             if (sum < 2000) {

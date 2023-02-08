@@ -5,11 +5,10 @@
 
 export function getClientWithNoMoney(array) {
   // Your code goes here...
-    var brokeBoys = [];
-    for (var account of array) {
-        if (account['balance'] == 0) {
-            var broke = account['name'];
-            brokeBoys.push(broke);
+    let brokeBoys = [];
+    for (let account of array) {
+        if (account.balance == 0) {
+            brokeBoys.push(account.name);
         }
     } return brokeBoys;
 }

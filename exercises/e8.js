@@ -6,16 +6,14 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-  var greatestValue = 0;
-  
-  for (const item of array) {
-    if (item['balance'] > greatestValue) {
-      var greatestValue = item['balance'];
-      var richestClient = [item];
+    var greatestValue = array[0];
+    for (const item of array) {
+        if (item['balance'] > greatestValue.balance) {
+            greatestValue = item;
+        }
     }
-  }
 
-  return richestClient;
+    return [greatestValue];
 }
 
 

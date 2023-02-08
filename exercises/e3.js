@@ -5,12 +5,13 @@
 
 export function getAverage(array) {
     // Your code goes here...
-    var sum = 0;
-    var length = array.length;
-    for (let i = 0; i < length;) {
+    let sum = 0;
+
+    for (let i = 0; i < array.length;) {
         sum += array[i];
         i += 1;
-    } return sum / length;
+    } 
+    return sum / array.length;
 }
 
 

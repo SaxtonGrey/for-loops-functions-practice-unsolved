@@ -12,10 +12,10 @@ export function flatArrays(array) {
     let result = [];
     for (let i = 0; i < array.length; i++) {
         if (Array.isArray(array[i])) {
-        let flattened = flatArrays(array[i]);
-        for (let j = 0; j < flattened.length; j++) {
-            result.push(flattened[j]);
-        }
+            let flattened = flatArrays(array[i]);
+            for (let j = 0; j < flattened.length; j++) {
+                result.push(flattened[j]);
+            }
         } else {
             result.push(array[i]);
             }

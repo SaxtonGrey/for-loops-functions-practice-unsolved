@@ -4,17 +4,14 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
-    var roots = [];
-    var num = 0;
-    while (num <= max) {
-        if (Number.isInteger(Math.sqrt(num))) {
-            roots.push(num);
-            num += 1;
-        } else {
-            num += 1;
+    let result = [];
+    for (let i = 0; i <= max; i++) {
+        let squareRoot = Math.sqrt(i);
+        if (squareRoot === Math.round(squareRoot)) {
+        result.push(i);
         }
-    } 
-    return roots;
+    }
+    return result;
 }
 
 // === TEST YOURSELF ===
