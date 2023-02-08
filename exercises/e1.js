@@ -5,10 +5,9 @@
 
 export function getFirstTenNumbers() {
   // Your code goes here...
-    let num = 0;
     let array = []
-    for (num.length <= 9; num++) {
-        array.push(num);
+    for (let i = 1; i <= 10; i++) {
+        array.push(i);
     } return array;
 }
 
